@@ -20,4 +20,9 @@ defmodule AssertionTest do
     list = ["a", :some_atom, 5, 'charlist', 789, "a wordy string"]
     assert ReverseList.reverse(list) == ["a wordy string", 789, 'charlist', 5, :some_atom, "a"]
   end
+
+  test "custom solution equal kernal solution" do
+    list = [1,2,3,4,5,6,7,8,9,"a", "b", "c", "d", :one, :two, :three, 'char', 'morechar', 'somechar']
+    assert ReverseList.reverse(list) == ReverseList.easy_way(list)
+  end
 end
